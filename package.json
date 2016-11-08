@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "next": "^1.1.1"
+    "next": "^1.1.1",
+    "rebass": "^0.3.3"
   },
   "scripts": {
     "dev": "next",
