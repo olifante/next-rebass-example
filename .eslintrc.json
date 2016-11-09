@@ -19,6 +19,6 @@
         "no-unused-vars": "warn",
         "constructor-super": "warn",
         "valid-typeof": "warn",
-        "react/jsx-uses-vars": "1"
+        "react/jsx-uses-vars": "0"
     }
 }
