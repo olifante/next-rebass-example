@@ -1,4 +1,22 @@
 {
+  "name": "next-rebass-example",
+  "version": "1.0.0",
+  "description": "An app showing how to use some Rebass components with next.js",
+  "keywords": [
+    "nextjs",
+    "rebass",
+    "react",
+    "universal",
+    "isomorphic"
+  ],
+  "author": "Tiago Henriques <trinosauro@gmail.com>",
+  "license": "MIT",
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ]
+  },
   "dependencies": {
     "next": "^1.1.1",
     "rebass": "^0.3.3"
