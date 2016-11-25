@@ -476,14 +476,14 @@ export default () => (
           }
         `}</style>
     </Head>
-    <Container>
+    <Flex p={2} wrap>
       {Object.entries(examples).map((pair, idx) => {
         let [key, value] = pair
-        return <Box key={idx} >
+        return <Box p={2} col={12} sm={6} key={idx} >
           <h2>{key}</h2>
           <div>{value}</div>
         </Box>
       })}
-    </Container>
+    </Flex>
   </div>
 )
