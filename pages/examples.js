@@ -457,24 +457,18 @@ const examples = {
   )
 }
 
+const style = css({
+    fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif',
+    color: '#111',
+    backgroundColor: '#fff',
+    lineHeight: 1.5,
+    margin: 0,
+})
+
 export default () => (
-  <div>
+  <div className={style}>
     <Head>
       <meta charSet="utf-8" />
-      <style>{`
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.5;
-            margin: 0;
-          }
-          .Button:hover {
-            box-shadow: inset 0 0 0 999px rgba(0, 0, 0, .25);
-          }
-          .Input input:focus {
-            outline: none;
-            box-shadow: 0 0 0 2px #00749d;
-          }
-        `}</style>
     </Head>
     <Flex p={2} wrap>
       {Object.entries(examples).map((pair, idx) => {
