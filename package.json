@@ -23,6 +23,9 @@
     "rebass": "^0.3.3",
     "reflexbox": "^2.1.0"
   },
+  "devDependencies": {
+    "eslint-plugin-react": "^6.7.1"
+  },
   "scripts": {
     "dev": "next",
     "build": "next build",

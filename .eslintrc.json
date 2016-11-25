@@ -1,4 +1,7 @@
 {
+    "plugins": [
+        "eslint-plugin-react"
+    ],
     "env": {
         "browser": true,
         "commonjs": true,
