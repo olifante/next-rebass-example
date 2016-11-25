@@ -3,6 +3,8 @@
 import css from 'next/css'
 import Link from 'next/link'
 import React from 'react'
+import Icon from 'react-geomicons'
+import { Flex, Box } from 'reflexbox'
 
 import {
   Arrow,
@@ -73,7 +75,7 @@ const examples = {
     <Avatar src='http://lorempixel.com/64/64/cats' />
   ),
   Badge: (
-    <div>
+    <Flex align='center'>
       <Heading level={4} children='Rebass' />
       <Space />
       <Badge theme='info' children='0.2.0' />
@@ -85,7 +87,7 @@ const examples = {
       <Heading level={4} children='Circular' />
       <Space />
       <Badge circle theme='error' children='4' />
-    </div>
+    </Flex>
   ),
   Banner: (
     <Banner backgroundImage='https://d262ilb51hltx0.cloudfront.net/max/2000/1*DZwdGMaeu-rvTroJYui6Uw.jpeg'>
@@ -110,7 +112,7 @@ const examples = {
       In the sixteenth century, a series of common sizes developed among European typographers, and the series survived with little change and few additions for 400 years. […] Use the old familiar scale, or use new scales of your own devising, but limit yourself, at first, to a modest set of distinct and related intervals.
     </Blockquote>
   ),
-  ButtonCircle: (
+  Breadcrumbs: (
     <Breadcrumbs
       links={[
         { href: '#!', children: 'Jxnblk' },
@@ -123,26 +125,29 @@ const examples = {
       <Button children='Button' />
     </div>
   ),
-  //   ButtonCircle: (
-  //     <div>
-  //       <ButtonCircle title='Like'>
-  //         <Icon name='heart' />
-  //       </ButtonCircle>
-  //       <ButtonCircle title='Comment'>
-  //         <Icon name='chat' />
-  //       </ButtonCircle>
-  //       <ButtonCircle title='Repost'>
-  //         <Icon name='repost' />
-  //       </ButtonCircle>
-  //       <ButtonCircle title='Bookmark'>
-  //         <Icon name='bookmark' />
-  //       </ButtonCircle>
-  //       <ButtonCircle title='Tag'>
-  //         <Icon name='tag' />
-  //       </ButtonCircle>
-  //       <Text small children='Example Icon component from react-geomicons' />
-  //     </div>
-  //   ),
+  ButtonCircle: (
+    <Flex
+      wrap
+      align='center'
+      justify='space-between'>
+      <ButtonCircle title='Like'>
+        <Icon name='heart' />
+      </ButtonCircle>
+      <ButtonCircle title='Comment'>
+        <Icon name='chat' />
+      </ButtonCircle>
+      <ButtonCircle title='Repost'>
+        <Icon name='repost' />
+      </ButtonCircle>
+      <ButtonCircle title='Bookmark'>
+        <Icon name='bookmark' />
+      </ButtonCircle>
+      <ButtonCircle title='Tag'>
+        <Icon name='tag' />
+      </ButtonCircle>
+      <Text small children='Example Icon component from react-geomicons' />
+    </Flex>
+  ),
   ButtonOutline: (
     <div>
       <ButtonOutline
@@ -200,12 +205,12 @@ const examples = {
     </div>
   ),
   Donut: (
-    <div>
+    <Flex align='center' justify='space-between' wrap>
       <Donut value={9 / 16} size={256} strokeWidth={32} />
       <Donut value={9 / 16} children='9/16' />
       <Donut value={5 / 8} />
       <Donut value={1 / 8} />
-    </div>
+    </Flex>
   ),
   DotIndicator: (
     <div>
@@ -397,12 +402,12 @@ const examples = {
     </div>
   ),
   Stat: (
-    <div>
+    <Flex wrap justify='space-between'>
       <Stat value='512' unit='GB' label='Memory' />
       <Stat value='32' label='PetaFLOPS' />
       <Stat value='512' unit='Mbps' label='Upload' />
       <Stat value='1,024' unit='Mbps' label='Download' />
-    </div>
+    </Flex>
   ),
   Switch: (
     <Switch />
@@ -453,59 +458,14 @@ const examples = {
 
 export default () => (
   <div>
-    {examples.Arrow}
-    {examples.Avatar}
-    {examples.Badge}
-    {examples.Banner}
-    {examples.Block}
-    {examples.Blockquote}
-    {examples.Breadcrumbs}
-    {examples.Button}
-    {examples.ButtonOutline}
-    {examples.Card}
-    {examples.CardImage}
-    {examples.Checkbox}
-    {examples.Close}
-    {examples.Container}
-    {examples.Divider}
-    {examples.Donut}
-    {examples.DotIndicator}
-    {examples.Drawer}
-    {examples.Dropdown}
-    {examples.DropdownMenu}
-    {examples.Embed}
-    {examples.Fixed}
-    {examples.Footer}
-    {examples.Heading}
-    {examples.HeadingLink}
-    {examples.InlineForm}
-    {examples.Input}
-    {examples.Label}
-    {examples.LinkBlock}
-    {examples.Media}
-    {examples.Menu}
-    {examples.Message}
-    {examples.Overlay}
-    {examples.PageHeader}
-    {examples.Panel}
-    {examples.Pre}
-    {examples.Progress}
-    {examples.Radio}
-    {examples.Rating}
-    {examples.Section}
-    {examples.SectionHeader}
-    {examples.Select}
-    {examples.SequenceMap}
-    {examples.SequenceMapStep}
-    {examples.Slider}
-    {examples.Space}
-    {examples.Stat}
-    {examples.Switch}
-    {examples.Table}
-    {examples.Text}
-    {examples.Textarea}
-    {examples.Toolbar}
-    {examples.Tooltip}
-    {examples.Base}
+    {Object.entries(examples).map((pair, idx) => {
+      let [key, value] = pair
+      return <div key={idx}>
+        <h2>{key}</h2>
+        <div>
+          {value}
+        </div>
+      </div>
+    })}
   </div>
 )
