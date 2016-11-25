@@ -3,6 +3,7 @@
 import css from 'next/css'
 import Link from 'next/link'
 import React from 'react'
+import Head from 'next/head'
 import Icon from 'react-geomicons'
 import { Flex, Box } from 'reflexbox'
 
@@ -458,14 +459,17 @@ const examples = {
 
 export default () => (
   <div>
-    {Object.entries(examples).map((pair, idx) => {
-      let [key, value] = pair
-      return <div key={idx}>
-        <h2>{key}</h2>
-        <div>
-          {value}
-        </div>
-      </div>
-    })}
+    <Head>
+      <meta charSet="utf-8" />
+    </Head>
+    <Container>
+      {Object.entries(examples).map((pair, idx) => {
+        let [key, value] = pair
+        return <Box key={idx} >
+          <h2>{key}</h2>
+          <div>{value}</div>
+        </Box>
+      })}
+    </Container>
   </div>
 )
