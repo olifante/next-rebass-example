@@ -461,6 +461,20 @@ export default () => (
   <div>
     <Head>
       <meta charSet="utf-8" />
+      <style>{`
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.5;
+            margin: 0;
+          }
+          .Button:hover {
+            box-shadow: inset 0 0 0 999px rgba(0, 0, 0, .25);
+          }
+          .Input input:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px #00749d;
+          }
+        `}</style>
     </Head>
     <Container>
       {Object.entries(examples).map((pair, idx) => {
