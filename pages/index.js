@@ -1,7 +1,6 @@
 // example adapted from https://github.com/jxnblk/rebass/docs/examples.js
 
 import css from 'next/css'
-import Link from 'next/link'
 import React from 'react'
 import Head from 'next/head'
 import Icon from 'react-geomicons'
@@ -29,7 +28,6 @@ import {
   Dropdown,
   DropdownMenu,
   Embed,
-  Fixed,
   Footer,
   Heading,
   InlineForm,
@@ -40,7 +38,6 @@ import {
   Menu,
   Message,
   NavItem,
-  Overlay,
   PageHeader,
   Panel,
   PanelFooter,
@@ -220,9 +217,6 @@ const examples = {
         active={0} />
     </div>
   ),
-  Drawer: (
-    <a href='demo'>See demo</a>
-  ),
   Dropdown: (
     <Dropdown>
       <Button>
@@ -243,9 +237,6 @@ const examples = {
         src='https://www.youtube.com/embed/KO_3Qgib6RQ'
         allowFullScreen />
     </Embed>
-  ),
-  Fixed: (
-    <a href='demo'>See demo</a>
   ),
   Footer: (
     <Footer>
@@ -300,9 +291,6 @@ const examples = {
       <Space auto />
       <Close />
     </Message>
-  ),
-  Overlay: (
-    <a href='demo'>See demo</a>
   ),
   PageHeader: (
     <PageHeader
