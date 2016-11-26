@@ -228,9 +228,6 @@ const examples = {
       </DropdownMenu>
     </Dropdown>
   ),
-  DropdownMenu: (
-    <a href='#Dropdown'>See Dropdown example</a>
-  ),
   Embed: (
     <Embed ratio={9 / 16}>
       <iframe
