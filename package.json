@@ -32,5 +32,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start"
+  },
+  "now": {
+    "alias": "next-rebass-example.now.sh"
   }
 }
