@@ -458,11 +458,11 @@ const examples = {
 }
 
 const style = css({
-    fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif',
-    color: '#111',
-    backgroundColor: '#fff',
-    lineHeight: 1.5,
-    margin: 0,
+  fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif',
+  color: '#111',
+  backgroundColor: '#fff',
+  lineHeight: 1.5,
+  margin: 0,
 })
 
 export default () => (
@@ -470,15 +470,28 @@ export default () => (
     <Head>
       <meta charSet="utf-8" />
     </Head>
+    <Toolbar p={0}>
+      <NavItem children='Next.js with Rebass' />
+    </Toolbar>
     <Flex p={2} wrap>
       {Object.entries(examples).map((pair, idx) => {
         let [key, value] = pair
         return <Box p={2} col={12} sm={6} key={idx} >
-          <hr/>
+          <hr />
           <h2>{key}</h2>
           <div>{value}</div>
         </Box>
       })}
     </Flex>
+    <Base
+      p={2}
+      mb={3}
+      color='white'
+      backgroundColor='black'
+      rounded
+      children='Base'>
+      code here: <a href="//github.com/olifante/next-rebass-example">Github</a>
+    </Base>
+
   </div>
 )
