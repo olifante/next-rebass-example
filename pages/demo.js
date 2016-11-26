@@ -12,19 +12,34 @@ var data = require('pkginfo')
 
 data.components = Object.keys(Rebass).length
 
-const style = css({
-  fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif',
-  color: '#111',
-  backgroundColor: '#fff',
-  lineHeight: 1.5,
-  margin: 0,
-})
+const style = css(
+  {
+    "html": {
+      "-webkit-text-size-adjust": "100%",
+    },
+    "body": {
+      "fontFamily": "-apple-system, BlinkMacSystemFont, sans-serif",
+      "color": "#111",
+      "backgroundColor": "#fff",
+      "lineHeight": "1.5",
+      "margin": "0",
+    },
+    "Button_hover": {
+      "boxShadow": "inset 0 0 0 999px rgba(0, 0, 0, .25)",
+    },
+    "Input_input_focus": {
+      "outline": "none",
+      "boxShadow": "0 0 0 2px #00749d",
+    },
+  }
+)
 
 export default () => (
   <div className={style}>
     <Head>
       <meta charSet="utf-8" />
+      <meta name="viewport" content="width=device-width,initial-scale=1" />
     </Head>
     <App {...data} />
-</div>
+  </div>
 )
