@@ -18,7 +18,9 @@
     ]
   },
   "dependencies": {
+    "jsonp": "^0.2.0",
     "next": "^1.1.1",
+    "pkginfo": "^0.4.0",
     "react-geomicons": "^2.0.5",
     "rebass": "^0.3.3",
     "reflexbox": "^2.1.0"
