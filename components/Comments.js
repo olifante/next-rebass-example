@@ -24,8 +24,8 @@ import {
 
 const comments = [
   {
-    avatar: 'https://pbs.twimg.com/profile_images/666139404210081792/ef2KOClR_bigger.png',
-    user: 'mrmrs',
+    avatar: 'http://lorempixel.com/64/64/cats/',
+    user: 'kittykat',
     text: 'Hello. Can you please explain what Rebass is?'
   },
   {
@@ -34,8 +34,8 @@ const comments = [
     text: 'Sure! It’s a library of React stateless functional UI components.'
   },
   {
-    avatar: 'https://pbs.twimg.com/profile_images/666139404210081792/ef2KOClR_bigger.png',
-    user: 'mrmrs',
+    avatar: 'http://lorempixel.com/64/64/cats/',
+    user: 'kittykat',
     text: 'wtf does that mean?'
   }
 ]
@@ -52,9 +52,9 @@ const Comments = () => (
             }} />
           <Flex align='center'>
             <Box px={2} py={2}>
-              <Avatar src='https://pbs.twimg.com/profile_images/666139404210081792/ef2KOClR_bigger.png' />
+              <Avatar src='http://lorempixel.com/64/64/cats/' />
             </Box>
-            <Text bold children='mrmrs' />
+            <Text bold children='kittykat' />
             <Space auto />
             <ButtonOutline m={2} children='Follow' />
           </Flex>
