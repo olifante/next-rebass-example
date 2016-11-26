@@ -474,6 +474,7 @@ export default () => (
       {Object.entries(examples).map((pair, idx) => {
         let [key, value] = pair
         return <Box p={2} col={12} sm={6} key={idx} >
+          <hr/>
           <h2>{key}</h2>
           <div>{value}</div>
         </Box>
