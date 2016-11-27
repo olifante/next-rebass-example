@@ -28,6 +28,7 @@ import {
   Dropdown,
   DropdownMenu,
   Embed,
+  Fixed,
   Footer,
   Heading,
   InlineForm,
@@ -442,22 +443,40 @@ const examples = {
   )
 }
 
-const style = css({
-  fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif',
-  color: '#111',
-  backgroundColor: '#fff',
-  lineHeight: 1.5,
-  margin: 0,
-})
+const style = `
+html { -webkit-text-size-adjust: 100% }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #111;
+  background-color: #fff;
+  line-height: 1.5;
+  margin: 0;
+}
+.Button:hover {
+  box-shadow: inset 0 0 0 999px rgba(0, 0, 0, .25);
+}
+.Input input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #00749d;
+}
+`
 
 export default () => (
-  <div className={style}>
+  <div>
     <Head>
       <meta charSet="utf-8" />
     </Head>
-    <Toolbar p={0}>
-      <NavItem children='Next.js with Rebass' />
-    </Toolbar>
+    <Head>
+      <meta charSet="utf-8" />
+      <meta name="viewport" content="width=device-width,initial-scale=1" />
+      <title>Rebass Components</title>
+      <style>{style}</style>
+    </Head>
+    <Fixed top left right zIndex={1}>
+      <Toolbar p={0}>
+        <NavItem children='Rebass Components' />
+      </Toolbar>
+    </Fixed>
     <Flex p={2} wrap>
       {Object.entries(examples).map((pair, idx) => {
         let [key, value] = pair
