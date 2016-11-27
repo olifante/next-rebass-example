@@ -487,15 +487,12 @@ export default () => (
         </Box>
       })}
     </Flex>
-    <Base
+    <Footer
       p={2}
-      mb={3}
+      mt={4}
       color='white'
-      backgroundColor='black'
-      rounded
-      children='Base'>
-      code here: <a href="//github.com/olifante/next-rebass-example">Github</a>
-    </Base>
-
+      backgroundColor='black'>
+        code here: <a href="//github.com/olifante/next-rebass-example">Github</a>
+    </Footer>
   </div>
 )
