@@ -24,13 +24,15 @@ const style = css(
       lineHeight: 1.5,
       margin: 0,
     },
-    Button_hover: {
+    ".Button:hover": {
       boxShadow: "inset 0 0 0 999px rgba(0, 0, 0, .25)",
     },
-    Input_input_focus: {
-      outline: "none",
-      boxShadow: "0 0 0 2px #00749d",
-    },
+    ".Input": {
+      "input:focus": {
+        outline: "none",
+        boxShadow: "0 0 0 2px #00749d",
+      }
+    }
   }
 )
 
