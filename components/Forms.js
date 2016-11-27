@@ -39,7 +39,7 @@ class Forms extends React.Component {
       input: 'Hello!',
       select: 128,
       radio: 'radio1',
-      textarea: null,
+      textarea: '',
       checkbox: true
     })
     this.handleChange = this.handleChange.bind(this)
