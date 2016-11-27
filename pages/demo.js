@@ -13,23 +13,18 @@ var data = require('pkginfo')
 data.components = Object.keys(Rebass).length
 
 const style = `
-html {
-    -webkit-text-size-adjust: 100%
-}
-
+html { -webkit-text-size-adjust: 100% }
 body {
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    line-height: 1.5;
-    margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.5;
+  margin: 0;
 }
-
 .Button:hover {
-    box-shadow: inset 0 0 0 999px rgba(0, 0, 0, .25);
+  box-shadow: inset 0 0 0 999px rgba(0, 0, 0, .25);
 }
-
 .Input input:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px #00749d;
+  outline: none;
+  box-shadow: 0 0 0 2px #00749d;
 }
 `
 
@@ -38,6 +33,7 @@ export default () => (
     <Head>
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width,initial-scale=1" />
+      <title>Rebass Demo</title>
       <style>{style}</style>
     </Head>
     <App {...data} />
