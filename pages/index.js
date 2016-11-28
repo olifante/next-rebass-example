@@ -374,7 +374,7 @@ for(i of arr) {
 
     </Container>
     <Footer m={2} >
-      Footer™ ©2016 Jxnblk
+      Footer™ ©2016 Tiago Henriques
     </Footer>
   </div>
 )
