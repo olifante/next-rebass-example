@@ -30,7 +30,6 @@ import {
   Heading,
   LinkBlock,
   Media,
-  Menu,
   Message,
   NavItem,
   PageHeader,
@@ -49,66 +48,50 @@ import {
   Tooltip,
 } from 'rebass'
 
-const examples = {
-  Arrow: (
-    <Button>
-      Arrow
-      <Arrow />
-    </Button>
-  ),
-  Avatar: (
-    <Avatar src='http://lorempixel.com/64/64/cats' />
-  ),
-  Divider: (
-    <div>
-      <Divider />
-      <Divider
-        ml={0}
-        width={128} />
-    </div>
-  ),
-  DotIndicator: (
-    <div>
-      <DotIndicator
-        length={3}
-        active={0} />
-    </div>
-  ),
-  Heading: (
-    <Heading children='Heading' />
-  ),
-  HeadingLink: (
-    <Heading href='#HeadingLink' children='HeadingLink' />
-  ),
-  LinkBlock: (
-    <LinkBlock href='#LinkBlock'>
-      <Media align='center' img='http://placehold.it/96/08e/fff'>
-        <Heading level={3} children='LinkBlock' />
-      </Media>
-    </LinkBlock>
-  ),
-  Media: (
-    <Media img='http://placehold.it/128/08e/fff' align='center'>
-      <Heading level={3} children='Media Object' />
-      <Text children='With alignment options' />
-    </Media>
-  ),
-  Menu: (
-    <Menu>
-      <NavItem children='Menu' />
-      <NavItem children='NavItem' />
-      <NavItem children='NavItem' />
-    </Menu>
-  ),
-  Rating: (
-    <Rating value={3.5} />
-  ),
-  Tooltip: (
-    <Tooltip title='Hello!'>
-      <Heading level={3}>Tooltip</Heading>
-    </Tooltip>
-  ),
-}
+// const examples = {
+//   Arrow: (
+//     <Button>
+//       Arrow
+//       <Arrow />
+//     </Button>
+//   ),
+//   Divider: (
+//     <div>
+//       <Divider />
+//       <Divider
+//         ml={0}
+//         width={128} />
+//     </div>
+//   ),
+//   DotIndicator: (
+//     <div>
+//       <DotIndicator
+//         length={3}
+//         active={0} />
+//     </div>
+//   ),
+//   Heading: (
+//     <Heading children='Heading' />
+//   ),
+//   HeadingLink: (
+//     <Heading href='#HeadingLink' children='HeadingLink' />
+//   ),
+//   LinkBlock: (
+//     <LinkBlock href='#LinkBlock'>
+//       <Media align='center' img='http://placehold.it/96/08e/fff'>
+//         <Heading level={3} children='LinkBlock' />
+//       </Media>
+//     </LinkBlock>
+//   ),
+//   Rating: (
+//     <Rating value={3.5} />
+//   ),
+//   Tooltip: (
+//     <Tooltip title='Hello!'>
+//       <Heading level={3}>Tooltip</Heading>
+//     </Tooltip>
+//   ),
+// }
 
 const style = `
 html { -webkit-text-size-adjust: 100% }
@@ -138,6 +121,7 @@ export default () => (
         <NavItem children='Toolbar' />
         <Space auto />
         <NavItem children='Item 1' />
+        <Space />
         <NavItem children='Item 2' />
       </Toolbar>
     </Fixed>
@@ -156,6 +140,15 @@ export default () => (
       <PageHeader
         heading='Page Header'
         description='Description about the page' />
+
+      <Flex wrap justify='space-between' m={2} >
+        <Avatar src='http://lorempixel.com/64/64/cats/1' />
+        <Avatar src='http://lorempixel.com/64/64/cats/2' />
+        <Avatar src='http://lorempixel.com/64/64/cats/3' />
+        <Avatar src='http://lorempixel.com/64/64/cats/4' />
+        <Avatar src='http://lorempixel.com/64/64/cats/5' />
+        <Avatar src='http://lorempixel.com/64/64/cats/6' />
+      </Flex>
 
       <Text>
         Obacht! Dem Fatzke jauchzen die einfältig Schutzschwalbe. Dem hold Haderlump flanieren. Des dufte Bagage lobpreisen. Des ausgemergelt Fernweh frickeln. Dem pomadig Fracksausen. Der fatal Gamaschen auftakeln. Dem gebeutelt Blutwurst. Fräulein und Klabusterbeere abkupfern piesacken Absacker. Die Prahlhans ergötzen dem blümerant Übeltäter. Der altbacken Wildfang lustwandeln. Dem geflissentlich Schlachtschüssel. Das Kohlroulade picheln die famos Schlachtenbummler. Das gemach Flegel bauchpinseln. Heidewitzka!
@@ -180,28 +173,37 @@ export default () => (
 
       <Flex p={1} wrap>
         <Card p={1} m={1} >
-          <CardImage src='http://placehold.it/200/08e/fff' />
+          <CardImage src='http://lorempixel.com/200/200/cats/1/' />
           <Heading size={3} children='Card' />
           <Text>Cats like cards too</Text>
         </Card>
 
         <Card p={1} m={1} >
-          <CardImage src='http://placehold.it/200/08e/fff' />
+          <CardImage src='http://lorempixel.com/200/200/cats/2/' />
           <Heading size={3} children='Card' />
           <Text>Cats like cards too</Text>
         </Card>
 
         <Card p={1} m={1} >
-          <CardImage src='http://placehold.it/200/08e/fff' />
+          <CardImage src='http://lorempixel.com/200/200/cats/3/' />
           <Heading size={3} children='Card' />
           <Text>Cats like cards too</Text>
         </Card>
       </Flex>
 
-      <Text>
-        Gott zum Gruße! Der Stelldichein picheln die gemach Kaiserwetter. Das hold Wuchtbrumme foppen. Des Haubitze bohnern das hochnäsig Hanswurst. Schlachtenbummler und Lametta liebkosen adrett Lümmeltüte. Des famos Rädelsführer auftakeln. Grüne Minna und Blockwart bemuttern grobschlächtig Eisbein. Der frivol Schuhwichse. Der Augenweide stibitzen das altbacken Schlachtschüssel. Die Steckenpferd jauchzen die flügge Sättigungsbeilage. Die nichtsnutzig Kinkerlitzchen betören. Des stramm Presssack. Fernweh und Wendehals lobpreisen kess Fleischwarenfachverkäuferin. Gemächt und Damenbart schlampampen einfältig Ganove. Der Gedudel dengeln der emsig Personenvereinzelungsanlage. Heidewitzka!
-      </Text>
+      <Flex p={2} justify='space-between' >
+        <Media p={2} img='http://lorempixel.com/150/150/animals/4/' align='center' />
+        <Text>
+          Gott zum Gruße! Der Stelldichein picheln die gemach Kaiserwetter. Das hold Wuchtbrumme foppen. Des Haubitze bohnern das hochnäsig Hanswurst. Schlachtenbummler und Lametta liebkosen adrett Lümmeltüte. Des famos Rädelsführer auftakeln. Grüne Minna und Blockwart bemuttern grobschlächtig Eisbein. Der frivol Schuhwichse. Der Augenweide stibitzen das altbacken Schlachtschüssel. Die Steckenpferd jauchzen die flügge Sättigungsbeilage. Die nichtsnutzig Kinkerlitzchen betören. Des stramm Presssack. Fernweh und Wendehals lobpreisen kess Fleischwarenfachverkäuferin. Gemächt und Damenbart schlampampen einfältig Ganove. Der Gedudel dengeln der emsig Personenvereinzelungsanlage. Heidewitzka!
+        </Text>
+      </Flex>
 
+      <Flex p={2} justify='space-between' >
+        <Text>
+          Habe die Ehre! Des schnieke Schwedenfilm. Das rosig Ohrenschmaus auftakeln. Dem einfältig Schutzschwalbe. Die Freikörperkultur betören des pfundig Scharlatan. Mumpitz und Kastrat lobpreisen gemach Blutwurst. Das Trinkhalle duellieren die halsstarrig Humbug. Des dufte Ganove. Des blindwütig Pantoffelheld. Das Übeltäter dengeln der emsig Quasselstrippe. Donnerwetter und Personenvereinzelungsanlage katzbuckeln frivol Schabracke. Die famos Lude. Des hochgestochen Kittchen erquicken. Früchtchen und Erbfeind festnageln bräsig Kleintierzuchtverein. Dem hold Fernweh. Mein lieber Herr Gesangsverein!
+        </Text>
+        <Media p={2} img='http://lorempixel.com/150/150/animals/5/' align='center' />
+      </Flex>
       <Flex wrap justify='space-between' m={2} >
         <Stat value='512' unit='GB' label='Memory' />
         <Stat value='32' label='PetaFLOPS' />
@@ -225,7 +227,7 @@ export default () => (
 
       <Text>
         Waidmanns Heil! Fatzke und Thusnelda duellieren hanebüchen Kinkerlitzchen. Mumpitz und Tausendsassa gutheißen töricht Bagage. Der altbacken Jungfer. Des Schelm piesacken das bierernst Wurstkessel. Dem Prahlhans stibitzen des blindwütig Luder. Schäferstündchen und Taugenichts verhaspeln pompös Personenvereinzelungsanlage. Das halbstark Lümmel. Des pomadig Kummerspeck. Des feist Herrengedeck. Die butterweich Wildfang festnageln. Gott zum Gruße!
-        </Text>
+      </Text>
 
       <Panel theme='info' m={2} >
         <PanelHeader children='Panel' />
@@ -273,18 +275,6 @@ export default () => (
         <Text small children='Example Icon component from react-geomicons' />
       </Flex>
 
-      <Container m={2}>
-        <Button children='Button' />
-      </Container>
-
-      <Flex wrap m={2} >
-        <Button children='Button' />
-        <Space />
-        <Button children='With' />
-        <Space x={4} />
-        <Button children='Space' />
-      </Flex>
-
       <Pre m={2} >
         {`
 let a = 123
@@ -321,6 +311,18 @@ for(i of arr) {
         Horch! Dem Abort abkupfern das famos Fernweh. Der gebeutelt Rädelsführer bemuttern. Quasselstrippe und Waschweib schlampampen rosig Tohuwabohu. Das Missetäter ergötzen des schnieke Fuchtel. Das blindwütig Steckenpferd. Dem schamlos Schuhwichse gutheißen. Dreikäsehoch und Gesinde bauchpinseln geflissentlich Herrengedeck. Dem Muckefuck stibitzen das dufte Bagage. Dem Schlachtenbummler lustwandeln die piesacken Haudegen. Der fatal Trinkhalle festnageln. Ei der Daus!
       </Text>
       <Container m={2} >
+        <Container m={2}>
+          <Button children='Button' />
+        </Container>
+
+        <Flex wrap m={2} >
+          <Button children='Button' />
+          <Space />
+          <Button children='With' />
+          <Space x={4} />
+          <Button children='Space' />
+        </Flex>
+
         <ButtonOutline
           rounded='left'
           children='Button' />
@@ -367,7 +369,6 @@ for(i of arr) {
             Aufgemerkt! Des blümerant Rostbratwurst. Mettigel und Schelm auftakeln feist Presssack. Des garstig Freikörperkultur. Die blindwütig Taugenichts lobpreisen. Das Narr jauchzen das pompös Schabracke. Dem schnieke Schindluder betören. Der butterweich Pantoffelheld schlampampen. Mumpitz und Groschengrab erquicken bierernst Fuchtel. Des pfundig Pranger. Dem Erbfeind katzbuckeln der flügge Firlefanz. Die geflissentlich Kesselflicker abkupfern. Heidewitzka!
           </Text>
         </Section>
-
 
       </Container>
 
