@@ -465,34 +465,36 @@ export default () => (
   <div>
     <Head>
       <meta charSet="utf-8" />
-    </Head>
-    <Head>
-      <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width,initial-scale=1" />
       <title>Rebass Components</title>
       <style>{style}</style>
     </Head>
+
     <Fixed top left right zIndex={1}>
       <Toolbar p={0}>
         <NavItem children='Rebass Components' />
       </Toolbar>
     </Fixed>
+
     <Flex p={2} wrap>
       {Object.entries(examples).map((pair, idx) => {
         let [key, value] = pair
-        return <Box p={2} col={12} sm={6} key={idx} >
-          <hr />
-          <h2>{key}</h2>
-          <div>{value}</div>
-        </Box>
+        return (
+          <Box p={2} col={12} sm={6} key={idx} >
+            <hr />
+            <h2>{key}</h2>
+            <div>{value}</div>
+          </Box>
+        )
       })}
     </Flex>
+
     <Footer
       p={2}
       mt={4}
       color='white'
       backgroundColor='black'>
-        code here: <a href="//github.com/olifante/next-rebass-example">Github</a>
+      code here: <a href="//github.com/olifante/next-rebass-example">Github</a>
     </Footer>
   </div>
 )
