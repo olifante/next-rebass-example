@@ -49,24 +49,21 @@ import {
   Tooltip,
 } from 'rebass'
 
-insertGlobal(
-  "html",
-  { "WebkitTextSizeAdjust": "100%" }
-)
-insertGlobal(
-  "body",
-  {
+const globalStyles = {
+  html: { "WebkitTextSizeAdjust": "100%" },
+  body: {
     fontFamily: "-apple-system, BlinkMacSystemFont, sans-serif",
     color: "#111",
     backgroundColor: "#fff",
     lineHeight: "1.5",
     margin: "0"
-  }
-)
-insertGlobal(
-  ".Button:hover",
-  { boxShadow: "inset 0 0 0 999px rgba(0, 0, 0, .25)" }
-)
+  },
+  ".Button:hover": { boxShadow: "inset 0 0 0 999px rgba(0, 0, 0, .25)" },
+}
+
+for (let [key, values] of Object.entries(globalStyles)) {
+  insertGlobal(key, values)
+}
 
 export default () => (
   <div>
