@@ -1,6 +1,7 @@
 // example adapted from https://github.com/jxnblk/rebass/docs/examples.js
 
 import css from 'next/css'
+import { insertGlobal } from 'next/css'
 import React from 'react'
 import Head from 'next/head'
 import Icon from 'react-geomicons'
@@ -48,64 +49,24 @@ import {
   Tooltip,
 } from 'rebass'
 
-// const examples = {
-//   Arrow: (
-//     <Button>
-//       Arrow
-//       <Arrow />
-//     </Button>
-//   ),
-//   Divider: (
-//     <div>
-//       <Divider />
-//       <Divider
-//         ml={0}
-//         width={128} />
-//     </div>
-//   ),
-//   DotIndicator: (
-//     <div>
-//       <DotIndicator
-//         length={3}
-//         active={0} />
-//     </div>
-//   ),
-//   Heading: (
-//     <Heading children='Heading' />
-//   ),
-//   HeadingLink: (
-//     <Heading href='#HeadingLink' children='HeadingLink' />
-//   ),
-//   LinkBlock: (
-//     <LinkBlock href='#LinkBlock'>
-//       <Media align='center' img='http://placehold.it/96/08e/fff'>
-//         <Heading level={3} children='LinkBlock' />
-//       </Media>
-//     </LinkBlock>
-//   ),
-//   Rating: (
-//     <Rating value={3.5} />
-//   ),
-//   Tooltip: (
-//     <Tooltip title='Hello!'>
-//       <Heading level={3}>Tooltip</Heading>
-//     </Tooltip>
-//   ),
-// }
-
-const style = `
-html { -webkit-text-size-adjust: 100% }
-body {
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  color: #111;
-  background-color: #fff;
-  line-height: 1.5;
-  margin: 0;
-}
-.Button:hover {
-  box-shadow: inset 0 0 0 999px rgba(0, 0, 0, .25);
-}
-`
+insertGlobal(
+  "html",
+  { "WebkitTextSizeAdjust": "100%" }
+)
+insertGlobal(
+  "body",
+  {
+    fontFamily: "-apple-system, BlinkMacSystemFont, sans-serif",
+    color: "#111",
+    backgroundColor: "#fff",
+    lineHeight: "1.5",
+    margin: "0"
+  }
+)
+insertGlobal(
+  ".Button:hover",
+  { boxShadow: "inset 0 0 0 999px rgba(0, 0, 0, .25)" }
+)
 
 export default () => (
   <div>
@@ -113,7 +74,6 @@ export default () => (
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width,initial-scale=1" />
       <title>Rebass Presentational Components</title>
-      <style>{style}</style>
     </Head>
     <Fixed
       top left right zIndex={1} >
